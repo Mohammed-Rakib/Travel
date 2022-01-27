@@ -73,6 +73,16 @@ const Blogs = () => {
     pageDecrementBtn = <li onClick={handlePrevbtn}> &hellip; </li>;
   }
 
+  if (!blogs.length) {
+    return (
+      <div>
+        <h1 className="py-32 text-center text-pink-500 ">
+          Blogs are loading...
+        </h1>
+      </div>
+    );
+  }
+
   return (
     <section className="py-5 md:w-9/12 w-11/12 mx-auto md:grid grid-cols-12">
       <div className="py-5 lg:col-span-2 md:col-span-4">

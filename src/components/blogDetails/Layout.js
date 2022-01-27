@@ -7,6 +7,14 @@ const Layout = () => {
   const { blogs } = useAuth();
 
   const blog = blogs.find((b) => b._id === id);
+
+  if (!blog) {
+    return (
+      <div>
+        <h1 className="py-40 text-center text-pink-500">Blog is loading...</h1>
+      </div>
+    );
+  }
   return (
     <section className="lg:w-7/12 md:w-9/12 w-11/12 mx-auto py-5 ">
       <h1 className="text-center py-4 font-bold md:text-4xl text-xl">
