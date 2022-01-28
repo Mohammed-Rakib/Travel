@@ -1,6 +1,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import MakeReviews from "./MakeReviews";
+import Reviews from "./Reviews";
 
 const Layout = () => {
   const { id } = useParams();
@@ -30,6 +32,14 @@ const Layout = () => {
         <span>{blog?.location}</span> <span>${blog?.cost}</span>
       </p>
       <p className="py-5">{blog?.description}</p>
+
+      {/* // user review */}
+      <div>
+        <hr />
+        <MakeReviews id={id} />
+        <hr />
+        <Reviews id={id} />
+      </div>
     </section>
   );
 };

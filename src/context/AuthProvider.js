@@ -1,6 +1,7 @@
 import React, { createContext } from "react";
 import useBlogs from "../hooks/useBlogs";
 import useFirebase from "../hooks/useFirebase";
+import useReviews from "../hooks/useReviews";
 import useUsers from "../hooks/useUsers";
 
 export const AuthContext = createContext();
@@ -18,6 +19,7 @@ const AuthProvider = ({ children }) => {
 
   const { users } = useUsers();
   const { blogs } = useBlogs();
+  const { reviews } = useReviews();
 
   return (
     <AuthContext.Provider
@@ -25,6 +27,7 @@ const AuthProvider = ({ children }) => {
         currentUser,
         users,
         blogs,
+        reviews,
         error,
         isLoading,
         signupWithEmailAndPassword,

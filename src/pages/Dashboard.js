@@ -3,6 +3,7 @@ import DashboardRoutes from "../components/dashboard/DashBoardRoutes";
 import { useRouteMatch, Route, Link } from "react-router-dom";
 import Blogs from "../components/dashboard/Blogs";
 import Users from "../components/dashboard/Users";
+import Reviews from "../components/dashboard/Reviews";
 
 const Dashboard = () => {
   let { path } = useRouteMatch();
@@ -28,6 +29,9 @@ const Dashboard = () => {
         </Route>
         <Route path={`${path}/blogs`}>
           <Blogs />
+        </Route>
+        <Route path={`${path}/reviews`}>
+          <Reviews />
         </Route>
         <Route path={`${path}/users`}>
           <Users />

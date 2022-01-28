@@ -1,10 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { AiOutlineHome } from "react-icons/ai";
-import { RiListUnordered } from "react-icons/ri";
-import { MdOutlineAdd } from "react-icons/md";
-import { FaRegSquare } from "react-icons/fa";
-import { FaAmazonPay } from "react-icons/fa";
 import { AiOutlineLogout } from "react-icons/ai";
 import { MdOutlineReviews } from "react-icons/md";
 import { useRouteMatch } from "react-router-dom";
@@ -24,6 +20,13 @@ const DashboardRoutes = () => {
         to={`${url}/blogs`}
       >
         <AiOutlineHome className="text-2xl text-gray-300 mx-2" /> Blogs
+      </NavLink>
+      <NavLink
+        activeStyle={activeStyle}
+        className="flex  items-center w-32 text-xl text-black py-2 my-2"
+        to={`${url}/reviews`}
+      >
+        <MdOutlineReviews className="text-2xl text-gray-300 mx-2" /> Reviews
       </NavLink>
       <NavLink
         activeStyle={activeStyle}

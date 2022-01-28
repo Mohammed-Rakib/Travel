@@ -25,7 +25,7 @@ const BlogForm = () => {
       cost: data.cost,
       location: data.location,
     };
-    fetch("http://localhost:4040/blogs", {
+    fetch("https://fathomless-dawn-94067.herokuapp.com/blogs", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(blogData),
